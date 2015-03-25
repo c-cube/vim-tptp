@@ -24,6 +24,18 @@ syn case match
 syn keyword     tptpRole        axiom conjecture negated_conjecture hypothesis type
 syn keyword     tptpLogic       fof tff thf cnf include
 
+syn match       tptpBuiltin     "$o\>"
+syn match       tptpBuiltin     "$i\>"
+syn match       tptpBuiltin     "$int>"
+syn match       tptpBuiltin     "$rat>"
+syn match       tptpBuiltin     "$real>"
+syn match       tptpBuiltin     "$tType"
+syn match       tptpBuiltin     "$sum\>"
+syn match       tptpBuiltin     "$product\>"
+syn match       tptpBuiltin     "$difference\>"
+syn match       tptpBuiltin     "$uminus\>"
+
+" generic dollar
 syn match       tptpDollar      "\<\$\w+\>"
 syn match       tptpDollarDollar "\<\$\$\w+\>"
 
@@ -84,6 +96,8 @@ if version >= 508 || !exists("did_tptp_syntax_inits")
   HiLink tptpLogic              Keyword
   HiLink tptpConnective         Keyword
   HiLink tptpDelim              Delimiter
+
+  HiLink tptpBuiltin            Special
 
   HiLink tptpDollar             String
   HiLink tptpDollarDollar       String
