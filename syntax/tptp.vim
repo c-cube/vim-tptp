@@ -39,7 +39,7 @@ syn match       tptpBuiltin     "$uminus\>"
 syn match       tptpDollar      "\<\$\w+\>"
 syn match       tptpDollarDollar "\<\$\$\w+\>"
 
-syn match       tptpQuote       "'[^"]*'"
+syn match       tptpQuote       "'[^']*'"
 syn match       tptpDoubleQuote "\"[^"]*\""
 
 syn match       tptpConnective  ":"
@@ -60,6 +60,9 @@ syn match       tptpConnective  "\*"
 syn match       tptpConnective  ">"
 
 syn match       tptpVar         "\<\u\w*\>"
+
+syn match       tptpNum         "\<-\?[0-9]\+\>"
+syn match       tptpNum         "\<-\?[0-9]\+/[0-9]\+\>"
 
 " errors
 
@@ -105,6 +108,8 @@ if version >= 508 || !exists("did_tptp_syntax_inits")
   HiLink tptpDoubleQuote        String
 
   HiLink tptpVar                Constant
+
+  HiLink tptpNum                Number
 
   HiLink tptpBraceError         Error
   HiLink tptpParenError         Error
