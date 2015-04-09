@@ -26,6 +26,9 @@ syn keyword     tptpLogic       fof tff thf cnf include
 
 syn match       tptpBuiltin     "$o\>"
 syn match       tptpBuiltin     "$i\>"
+syn match       tptpBuiltin     "$true\>"
+syn match       tptpBuiltin     "$false\>"
+
 syn match       tptpBuiltin     "$int\>"
 syn match       tptpBuiltin     "$rat\>"
 syn match       tptpBuiltin     "$real\>"
