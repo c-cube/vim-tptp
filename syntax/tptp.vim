@@ -99,10 +99,10 @@ syn match       tptpNum         "\<-\?[0-9]\+/[0-9]\+\>"
 syn region      tptpParen       matchgroup=tptpDelim start="("  end=")" contains=ALLBUT,tptpParenError keepend contained
 syn region      tptpParen       matchgroup=tptpDelim start="\[" end="\]" contains=ALLBUT,tptpBraceError keepend contained
 
-syn keyword	tptpTodo	contained TODO BUG FIX
+syn keyword	tptpTodo	contained TODO BUG FIX FIXME NOTE
 
 syn region      tptpComment	start=+/\*+ end=+\*/+ contains=tptpTodo
-syn match       tptpComment     contains=TODO +%.*+
+syn match       tptpComment     +%.*+ contains=tptpTodo
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
