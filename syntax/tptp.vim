@@ -21,7 +21,7 @@ set expandtab
 
 syn case match
 
-syn keyword     tptpRole        axiom conjecture negated_conjecture hypothesis type
+syn keyword     tptpRole        axiom hypothesis definition assumption lemma theorem corollary conjecture negated_conjecture plain fi_domain fi_functors fi_predicates type unknown
 syn keyword     tptpLogic       fof tff thf cnf include
 
 syn match       tptpBuiltin     "$o\>"
