@@ -33,6 +33,7 @@ syn match       tptpBuiltin     "$int\>"
 syn match       tptpBuiltin     "$rat\>"
 syn match       tptpBuiltin     "$real\>"
 syn match       tptpBuiltin     "$tType\>"
+syn match       tptpBuiltin     "$_\>"
 
 syn match       tptpBuiltin     "$floor"
 syn match       tptpBuiltin     "$ceiling"
